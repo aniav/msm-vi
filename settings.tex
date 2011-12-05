@@ -19,6 +19,7 @@
 %grafika i geometria strony
 \usepackage{extsizes} %Dostepne inne rozmiary czcionek, np. 14 w poleceniu: \documentclass[14pt]{article}.
 \usepackage[final]{graphicx}
+\graphicspath{{./img/}}
 %inne
 \usepackage{expdlist}    %Zmienia definicję środowiska description, daje większe możliwości wpływu na wygląd listy.
 \usepackage{flafter}     %Wprowadza parametr [tb] do polecenia \suppressfloats[t] (polecenie to powoduje nie umieszczanie rysunkow, tabel itp. na stronach, na ktorych jest to polecenie (np. moze byc to stroma z tytulem rozdzialu, ktory chcemy zeby byl u samej gory, a nie np. pod rysunkiem)).
@@ -71,6 +72,9 @@
 \subsectionfont{\fontsize{13}{18pt}}
 \subsectionfont{\normalsize}
 
+%%cytowanie
+\def \myfoot[#1]{\let\thefootnote\relax\footnotetext{\citetalias{#1}}}
+
 %cytowanie literatury
 \defcitealias{alreck_settle}{\cite{alreck_settle} Alreck et al.: Gender Effects on Internet, Catalogue and Store Shopping, 2002}
 \defcitealias{stafford}{\cite{stafford} Stafford et al.: International and Cross-Cultural Influences on Online Shopping Behavior, 2004}
@@ -99,6 +103,10 @@
 \defcitealias{keeney}{\cite{keeney} Keeney: The value of Interncet commerce to the customer, 1999}
 \defcitealias{yoo}{\cite{yoo} Yoo: Experiment on the effectiveness of link structure for convenient cybershopping, 2000}
 \defcitealias{kim}{\cite{kim} Kim: Critical design factors for successful e-commerce systems, 2002}
+\defcitealias{hoffman}{\cite{hoffman} Hoffman: Commercial Scernarios for the Web: Opportunities and challenges, 1996}
+\defcitealias{cappel}{\cite{cappel} Cappel: World Wide Web uses for electronic commerce: Toward a classification scheme, 1996}
+\defcitealias{gregor}{\cite{gregor} Gregor: e-Commerce, 2002}
+\defcitealias{global_trends}{\cite{global_trends} Global Trends in Online Shopping, 2010}
 
 \def\literatura{
   \section{LITERATURA}
@@ -106,13 +114,17 @@
   \subsection{Bibliografia}
   \vspace{-40pt}
     \begin{thebibliography}{5}
-    \bibitem{alsomali} Al-Somali, S., Gholami, R. and Clegg, B.: An investigation into the acceptance of online banking in Saudi Arabia, Technovation, wydanie 29, nr 2, 2009
+    \bibitem{alsomali} Al-Somali, S., Gholami, R. i Clegg, B.: An investigation into the acceptance of online banking in Saudi Arabia, Technovation, wydanie 29, nr 2, 2009
     \bibitem{alreck_settle} Alreck, P. and Settle, R. B.: Gender Effects on Internet, Catalogue and Store Shopping, Journal of Database Marketing, wydanie 9, nr 2, strony 150-162, 2002
     \bibitem{bellman} Bellman S., Lohse G. L., Johnson E. J.: Predictors of online buying behavior, Communications of ACM, wydanie 42, str. 32-38, 1999
+    \bibitem{cappel} Cappel J. J. i Myerscough M. A.: World Wide Web uses for electronic commerce: Toward a classification scheme, 1996
     \bibitem{eurostat} Eurostat, Internet usage in 2009 – households and individuals, 2009
     \bibitem{garbarino} Garbarino, E. and Strabilevitz, M.: Gender Differences in the Perceived Risk of Buying Online and the Effects of Receiving a Site Recommendation, Journal of Business Research wydanie 57, str. 768-775, 2004
     \bibitem{gate} Gate R., Nacamuli A.: Electronic Funds Transfer, The Internet Encyclopedia, 2004 
+    \bibitem{global_trends} Global Trends in Online Shopping, A Nielsen Global Consumer Report, June 2010
+    \bibitem{gregor} Gregor B., Stawiszyński M.: e-Commerce, 2002
     \bibitem{helander} Helander M. G., Khalid H. M.: Modeling the customer in electronic commerce. Applied Ergonomics wydanie 31, str. 609-619, 2000
+    \bibitem{hoffman} Hoffman D. L., Novak T. P. i Chatterjee P.: Commercial Scernarios for the Web: Opportunities and challenges. Journal of Computer-Mediated Communication, Special Issue on Electronic Commerce, str. 1-3, 1996
     \bibitem{joines} Joines, J., Scherer, C. and Scheufele, D.: Exploring Motivations for Consumer Web Use and Their Implications for E-Commerce, Journal of Consumer Marketing wydanie 20, nr 2, str. 90-109, 2003
     \bibitem{kantor} Kantor M., Burrows J. H.: Electronic Data Interchange (EDI), National Institute of Standards and Technology, 1996
     \bibitem{kaushik} Kaushik P.: History of E-Commerce, 2010
