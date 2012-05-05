@@ -8,7 +8,7 @@
 \usepackage[english,polish]{babel}
 \usepackage{polski}
 %czcionki
-\usepackage{times} %Times new Romanpa
+\usepackage{times} %Times new Roman
 %\usepackage[scaled]{uarial}
 %obsługa pdfa
 \usepackage[pdftex,usenames,dvipsnames]{color}      %Obsługa kolorów. Opcje usenames i dvipsnames wprowadzają 
@@ -18,7 +18,7 @@
 \usepackage{hypernat} %Potrzebna pakietowi natbib do wspolpracy z pakietem hyperref (wazna kolejnosc: 1. hyperref, 2. natbib, 3. hypernat).
 %grafika i geometria strony
 \usepackage{extsizes} %Dostepne inne rozmiary czcionek, np. 14 w poleceniu: \documentclass[14pt]{article}.
-\usepackage[final]{graphicx}
+\usepackage{graphicx}
 \graphicspath{{img/}}
 %inne
 \usepackage{expdlist}    %Zmienia definicję środowiska description, daje większe możliwości wpływu na wygląd listy.
@@ -30,6 +30,8 @@
 \usepackage{fancyhdr} %drukowanie dwustronne z lustrzaną numeracją
 \usepackage[a4paper,left=3cm,right=1.5cm,top=2.5cm,bottom=2.5cm]{geometry}
 \usepackage{sectsty} %modyfikacje w sekcjach
+\usepackage[section] {placeins}
+\usepackage{enumerate} % custom enumeration lists
 % ------------------------------------------------------------------------
 % USTAWIENIA
 % ------------------------------------------------------------------------
@@ -71,12 +73,35 @@
 \renewcommand{\sfdefault}{phv} % Arial
 
 %%sekcje
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
 \sectionfont{\Large\MakeUppercase}
 \subsectionfont{\fontsize{13}{18pt}}
 \subsectionfont{\normalsize}
 
+\makeatletter
+\renewcommand\paragraph{%
+   \@startsection{paragraph}{4}{0mm}%
+      {-\baselineskip}%
+      {.5\baselineskip}%
+      {\normalfont\normalsize\bfseries}}
+\makeatother
+
 %%cytowanie
 \def \myfoot[#1]{\let\thefootnote\relax\footnotetext{\citetalias{#1}}}
+
+\makeatletter
+\renewcommand\listoffigures{%
+  \section{\listfigurename}%
+  \@mkboth{\MakeUppercase\listfigurename}{\MakeUppercase\listfigurename}%
+  \@starttoc{lof}%
+}
+
+\renewcommand\listoftables{%
+    \section{\listtablename}%
+      \@mkboth{\MakeUppercase\listtablename}{\MakeUppercase\listtablename}
+    \@starttoc{lot}%
+}
 
 %cytowanie literatury
 \defcitealias{alreck_settle}{\cite{alreck_settle} Alreck et al.: Gender Effects on Internet, Catalogue and Store Shopping, 2002}
@@ -115,7 +140,7 @@
 \defcitealias{pitkow_kehoe} {\cite{pitkow_kehoe} Pitkow: Emerging trends in the www user population, 1996}
 \defcitealias{katz_aspen} {\cite{katz_aspen} Katz: Motives, hurdles and dropouts. Who is on the Internet and why?, 1997}
 \defcitealias{manhartsberger} {\cite{manhartsberger} Manhartsberger: Web Usability: Das Prinzip des Vertrauens, 2001}
-\defcitealias{gamification} {\cite{gamification} Wikipedia: Gamification}
+\defcitealias{gamification} {\cite{gamification} Gamification, Wikipedia}
 \defcitealias{zichermann} {\cite{zichermann} Zichermann: Game Based Marketing, 2010}
 \defcitealias{harris} {\cite{harris} Harris: Privacy leadership initiative, 2001}
 \defcitealias{grabner} {\cite{grabner} Grabner-Kräuter: Empirical research in online trust: a review and critical assessment, 2003}
@@ -124,9 +149,15 @@
 \defcitealias{iab} {\cite{iab} Interactive Bureau (IAB): FTSE-100's Web sites are still 'wallowing in mediocrity', 2003}
 \defcitealias{mckinsey} {\cite{mckinsey} McKinsey Quarterly: Getting prices right on the Web, 2001}
 \defcitealias{nicholls} {\cite{nicholls} Nicholls: The Science of Shopping Cart Abandonment, 2011}
+\defcitealias{inzynieria} {\cite{inzynieria} Czerner: Inżynieria oprogramowania, 2011}
+\defcitealias{google_seo} {\cite{google_seo} Sisson: Google SEO secrets, 2006}
+\defcitealias{ga}{\cite{ga} Google Analytics for NetSuite}
+\defcitealias{polldaddy}{\cite{polldaddy} polldaddy.com web 2.0 poll survey results charts} 
+\defcitealias{opiniac}{\cite{opiniac} Opiniac.com – subiektywna ocena narzędzia do zbierania opinii użytkowników}
+\defcitealias{kampyle}{\cite{kampyle} Customer Feedback with Kampyle and Magento}
+\defcitealias{sommerville}{\cite{sommerville} Sommerville: Inżynieria Oprogramowania}
 
 \def\literatura{
-  \section{LITERATURA}
   \renewcommand*{\refname}{}
   \subsection{Bibliografia}
   \vspace{-40pt}
@@ -138,7 +169,7 @@
     \bibitem{constantinades} Constantinades E.: Influencing the online consumer's behavior: the Web experience, Internet Research, wydanie 14, nr 2, str. 111-126, 2004
     \bibitem{eurostat} Eurostat, Internet usage in 2009 – households and individuals, 2009
     \bibitem{fogg} Fogg B.G., Soohoo C., Danielson D., Marable L., Stanford J., Tauber E.: How do people evaluate a Web site's credibility? Results from a large study, Persuasive Technology Lab, Stanford University, 2002
-    \bibitem{gamification} Wikipedia, Gamification, http://en.wikipedia.org/wiki/Gamification, dostęp 06.01.2012
+
     \bibitem{garbarino} Garbarino, E. and Strabilevitz, M.: Gender Differences in the Perceived Risk of Buying Online and the Effects of Receiving a Site Recommendation, Journal of Business Research wydanie 57, str. 768-775, 2004
     \bibitem{gate} Gate R., Nacamuli A.: Electronic Funds Transfer, The Internet Encyclopedia, 2004 
     \bibitem{global_trends} Global Trends in Online Shopping, A Nielsen Global Consumer Report, June 2010
@@ -163,10 +194,10 @@
     \bibitem{nicholls} Nicholls Ch.: The Science of Shopping Cart Abandonment, A research report from The Conversion Academy, 2011
     \bibitem{nielsen} Nielsen J., Molich R., Snyder C., Farrel S.: E-Commerce user experience, Fremont, CA: Nielsen Norman Group, 2001
     \bibitem{park_2004} Park, J., Lee, D. and Ahn, J.: Risk-Focused E-Commerce Adoption Model: a Cross-Country Study, Journal of Global Information Management wydanie 7, str. 6-30, 2004
-    \bibitem{census} QUARTERLY RETAIL E-COMMERCE SALES 4th QUARTER 2008, http://www.census.gov/mrts/www/data/html/08Q4.html, dostęp 17.09.2011
     \bibitem{pitkow_kehoe} Pitkow J.E., Kehoe C.M.: Emerging trends in the www user population . Communications of the ACM, wydanie 39, str. 106-108, C.M. 1996
     \bibitem{shin} Shin, D.H.: Towards an understanding of the consumer acceptance of mobile wallet,
 Computers in Human Behavior, wydanie 25, nr 6, str. 1343-54, 2009
+    \bibitem{google_seo} Sisson, D.: Google SEO secrets, How to Get a Top Ranking With Search Engine Optimization, 2006
     \bibitem{slyke} Slyke, C. V., Comunale, C. L. and Belanger, F.: Gender Differences in Perceptions of Web-Based Shopping, Communications of the ACM wydanie 45, nr 7, str. 82-86, 2002
     \bibitem{spiller} Spiller P., Lohse G. L.: A classification of internet retail stores. International Journal of Electronic Commerce, wydanie 2, str. 29-56, 1997
     \bibitem{stafford} Stafford, T. F., Turan, A. and Raisinghani, M. S.: International and Cross-Cultural Influences on Online Shopping Behavior, Journal of Global Information Management, wydanie 7, nr 2, str. 70-87, 2004
@@ -180,12 +211,30 @@ Australian DAMA Conference, Melbourne, Victoria, 1996
     \bibitem{zichermann} Zichermann G., Linder J.: Game-based marketing: inspire customer loyalty through re-wards, challenges, and contests, Wiley, 2010
 
   \end{thebibliography}
-  %\renewcommand*{\refname}{}
-  %\subsection{Źródła internetowe}
-  %\vspace{-40pt}
-  %\begin{thebibliography}{5}
-  %  \bibitem{census} QUARTERLY RETAIL E-COMMERCE SALES 4th QUARTER 2008, http://www.census.gov/mrts/www/data/html/08Q4.html, dostęp 17.09.2011
-  %\end{thebibliography}
+  \renewcommand*{\refname}{}
+  \subsection{Netografia}
+  \vspace{-40pt}
+  \begin{thebibliography}{5}
+    \bibitem{kampyle}{Customer Feedback with Kampyle and Magento,
+    http://www.magentocommerce.com/blog/customer-feedback-with-kampyle-and-magento/,
+    dostęp 01.04.2012}
+    \bibitem{inzynieria} {Czerner D.: Inżynieria oprogramowania 2011, 
+    http://zasoby.open.agh.edu.pl/~10sdczerner/, dostęp 25.03.2012}
+    \bibitem{gamification} {Gamification, http://en.wikipedia.org/wiki/Gamification, 
+    dostęp 06.01.2012}
+    \bibitem{ga} {Google Analytics for NetSuite, 
+    http://www.exploreconsulting.com/netsuite-google-analytics.html, dostęp 01.04.2012}
+    \bibitem{opiniac}{Opiniac.com – subiektywna ocena narzędzia do zbierania opinii użytkowników,
+    http://www.conversion.pl/blog/opiniac-com/, dostęp 01.04.2012}
+    \bibitem{polldaddy}{polldaddy.com web 2.0 poll survey results charts,
+    http://www.web20screenshots.com/2010/02/polldaddy-com-web-2-0-poll-survey-results-charts/,
+    dostęp 01.04.2012}
+    \bibitem{sommerville}{Sommerville I.: Inżynieria Oprogramowania, rozdział 5, 
+    www.mif.pg.gda.pl/kft/Rozdz5.ppt}
+    \bibitem{census} {QUARTERLY RETAIL E-COMMERCE SALES 4th QUARTER 2008, 
+    http://www.census.gov/mrts/www/data/html/08Q4.html, dostęp 17.09.2011}
+
+  \end{thebibliography}
   \newpage
 }
 
