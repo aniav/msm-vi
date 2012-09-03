@@ -3,7 +3,7 @@
 % ------------------------------------------------------------------------
 %kodowanie i obsługa języka
 \usepackage{textcomp}
-\usepackage[utf8]{inputenc}
+\usepackage[utf8x]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[english,polish]{babel}
 \usepackage{polski}
@@ -11,7 +11,7 @@
 \usepackage{times} %Times new Roman
 %\usepackage[scaled]{uarial}
 %obsługa pdfa
-\usepackage[pdftex,usenames,dvipsnames]{color}      %Obsługa kolorów. Opcje usenames i dvipsnames wprowadzają 
+\usepackage[usenames,dvipsnames]{color}      %Obsługa kolorów. Opcje usenames i dvipsnames wprowadzają 
 %bibliografia
 \usepackage{hyperref}
 \usepackage[numbers,sort&compress]{natbib} %Porządkuje zawartość odnośników do literatury, np. [2-4,6]. Musi być pod pdf'em, a styl bibliogfafii musi mieć nazwę z dodatkiem 'nat', np. \bibliographystyle{unsrtnat} (w kolejności cytowania).
@@ -24,7 +24,7 @@
 \usepackage{expdlist}    %Zmienia definicję środowiska description, daje większe możliwości wpływu na wygląd listy.
 \usepackage{flafter}     %Wprowadza parametr [tb] do polecenia \suppressfloats[t] (polecenie to powoduje nie umieszczanie rysunkow, tabel itp. na stronach, na ktorych jest to polecenie (np. moze byc to stroma z tytulem rozdzialu, ktory chcemy zeby byl u samej gory, a nie np. pod rysunkiem)).
 \usepackage{array}       %Ładniej drukuje tabelki (np. daje wiecej miejsca w komorkach -- nie są tak sciemnione, jak bez tego pakietu).
-\usepackage{listings}    %Listingi programow.
+\usepackage{listings}  % Source code attachments
 \usepackage[format=hang,labelsep=period,labelfont={bf,small},textfont=small]{caption}   %Formatuje podpisy pod rysunkami i tabelami. Parametr 'hang' powoduje wcięcie kolejnych linii podpisu na szerokosc nazwy podpisu, np. 'Rysunek 1.'.
 \usepackage{appendix} %załączniki.
 \usepackage{fancyhdr} %drukowanie dwustronne z lustrzaną numeracją
@@ -146,7 +146,7 @@
 \defcitealias{grabner} {\cite{grabner} Grabner-Kräuter: Empirical research in online trust: a review and critical assessment, 2003}
 \defcitealias{vrechopoulos} {\cite{vrechopoulos} Vrechopoulos: Virtual Store athmosphere in internet retailing, 2000}
 \defcitealias{fogg} {\cite{fogg} Fogg et al.: How do people evaluate a Web site's credibility? Results from a large study, 2002}
-\defcitealias{iab} {\cite{iab} Interactive Bureau (IAB): FTSE-100's Web sites are still 'wallowing in mediocrity', 2003}
+\defcitealias{iab} {\cite{iab} Interactive Bureau (IAB): FTSE-100\'s Web sites are still \'wallowing in mediocrity\', 2003}
 \defcitealias{mckinsey} {\cite{mckinsey} McKinsey Quarterly: Getting prices right on the Web, 2001}
 \defcitealias{nicholls} {\cite{nicholls} Nicholls: The Science of Shopping Cart Abandonment, 2011}
 \defcitealias{inzynieria} {\cite{inzynieria} Czerner: Inżynieria oprogramowania, 2011}
@@ -162,39 +162,39 @@
   \subsection{Bibliografia}
   \vspace{-40pt}
     \begin{thebibliography}{40}
-    \bibitem{alsomali} Al-Somali S., Gholami, R. i Clegg, B.: An investigation into the acceptance of online banking in Saudi Arabia, Technovation, wydanie 29, nr 2, 2009
-    \bibitem{alreck_settle} Alreck, P. and Settle, R. B.: Gender Effects on Internet, Catalogue and Store Shopping, Journal of Database Marketing, wydanie 9, nr 2, str. 150-162, 2002
-    \bibitem{bellman} Bellman S., Lohse G. L., Johnson E. J.: Predictors of online buying behavior, Communications of ACM, wydanie 42, str. 32-38, 1999
-    \bibitem{cappel} Cappel J. J. i Myerscough M. A.: World Wide Web uses for electronic commerce: Toward a classification scheme, 1996
-    \bibitem{constantinades} Constantinades E.: Influencing the online consumer's behavior: the Web experience, Internet Research, wydanie 14, nr 2, str. 111-126, 2004
-    \bibitem{eurostat} Eurostat, Internet usage in 2009 – households and individuals, 2009
-    \bibitem{fogg} Fogg B.G., Soohoo C., Danielson D., Marable L., Stanford J., Tauber E.: How do people evaluate a Web site's credibility? Results from a large study, Persuasive Technology Lab, Stanford University, 2002
+    \bibitem{alsomali} {Al-Somali S., Gholami, R. i Clegg, B.: An investigation into the acceptance of online banking in Saudi Arabia, Technovation, wydanie 29, nr 2, 2009}
+    \bibitem{alreck_settle} {Alreck, P. and Settle, R. B.: Gender Effects on Internet, Catalogue and Store Shopping, Journal of Database Marketing, wydanie 9, nr 2, str. 150-162, 2002}
+    \bibitem{bellman} {Bellman S., Lohse G. L., Johnson E. J.: Predictors of online buying behavior, Communications of ACM, wydanie 42, str. 32-38, 1999}
+    \bibitem{cappel} {Cappel J. J. i Myerscough M. A.: World Wide Web uses for electronic commerce: Toward a classification scheme, 1996}
+    \bibitem{constantinades} {Constantinades E.: Influencing the online consumer's behavior: the Web experience, Internet Research, wydanie 14, nr 2, str. 111-126, 2004}
+    \bibitem{eurostat} {Eurostat, Internet usage in 2009 – households and individuals, 2009}
+    \bibitem{fogg} {Fogg B.G., Soohoo C., Danielson D., Marable L., Stanford J., Tauber E.: How do people evaluate a Web site\'s credibility? Results from a large study, Persuasive Technology Lab, Stanford University, 2002}
 
-    \bibitem{garbarino} Garbarino, E. and Strabilevitz, M.: Gender Differences in the Perceived Risk of Buying Online and the Effects of Receiving a Site Recommendation, Journal of Business Research wydanie 57, str. 768-775, 2004
-    \bibitem{gate} Gate R., Nacamuli A.: Electronic Funds Transfer, The Internet Encyclopedia, 2004 
-    \bibitem{global_trends} Global Trends in Online Shopping, A Nielsen Global Consumer Report, June 2010
-    \bibitem{grabner} Grabner-Kräuter S., Kaluscha A.E.: Empirical research in online trust: a review and critical assessment, International Journal of Human-Computer Studies, wydanie 58, nr 6, str. 783-812, 2003
-    \bibitem{gregor} Gregor B., Stawiszyński M.: e-Commerce, 2002
-    \bibitem{harris} Harris Interactive: Privacy leadership initiative, 2001
-    \bibitem{helander} Helander M. G., Khalid H. M.: Modeling the customer in electronic commerce. Applied Ergonomics wydanie 31, str. 609-619, 2000
-    \bibitem{hoffman} Hoffman D. L., Novak T. P. i Chatterjee P.: Commercial Scernarios for the Web: Opportunities and challenges. Journal of Computer-Mediated Communication, Special Issue on Electronic Commerce, str. 1-3, 1996
-    \bibitem{iab} Interactive Bureau (IAB): FTSE-100's Web sites are still 'wallowing in mediocrity', 2003
-    \bibitem{joines} Joines, J., Scherer, C. and Scheufele, D.: Exploring Motivations for Consumer Web Use and Their Implications for E-Commerce, Journal of Consumer Marketing wydanie 20, nr 2, str. 90-109, 2003
-    \bibitem{kantor} Kantor M., Burrows J. H.: Electronic Data Interchange (EDI), National Institute of Standards and Technology, 1996
-    \bibitem{katz_aspen} Katz J., Aspen P.: Motives, hurdles and dropouts. Who is on the Internet and why? Communications of the ACM, wydanie 40, str. 97-102, 1997
-    \bibitem{kaushik} Kaushik P.: History of E-Commerce, 2010
-    \bibitem{keeney} Keeney R. L.: The value of Internet commerce to the customer, Management Science, wydanie 45, str. 533-542, 1999
-    \bibitem{kim} Kim J., Lee J.: Critical design factors for successful e-commerce systems, Behaviour and Information Technology, wydanie 21, str. 185-199, 2002
-    \bibitem{li} Li, H., Kuo, C. and Russell, M. G.: The Impact of Perceived Channel Utilities, Shopping Orientations, and Demographics on the Consumer's Online Buying Behavior, Journal of Computer-Mediated Communication, wydanie 5, nr 2, 1999
-    \bibitem{lu} Lu, J., Yu, C.S., Liu, C. and Yao, J.: Technology acceptance model for wireless internet, Internet Research: Electronic Networking Applications and Policy, wydanie 13 nr 3, str. 206-22, 2003
-    \bibitem{lynch} Lynch, P. D., Kent, R. J. and Srinivasan, S. S.: The Global Internet Shopper: Evidence From Shopping Tasks in Twelve Countries, Journal of Advertising Research wydanie 41, nr 3, str. 15-23, 2001
-    \bibitem{mahmood} Mahmood, M. A., Bagchi, K. and Ford, T. C.: On-Line Shopping Behavior: Cross-Country Empirical Research, International Journal of Electronic Commerce, rocznik 9, nr 1, str. 9-30, 2004
-    \bibitem{manhartsberger} Manhartsberger M., Musil S.: Web Usability: Das Prinzip des Vertrauens, Galileo Press, Bonn, 2001
-    \bibitem{mckinsey} McKinsey Quarterly: Getting prices right on the Web, Report No. 2, 2001
-    \bibitem{nicholls} Nicholls Ch.: The Science of Shopping Cart Abandonment, A research report from The Conversion Academy, 2011
-    \bibitem{nielsen} Nielsen J., Molich R., Snyder C., Farrel S.: E-Commerce user experience, Fremont, CA: Nielsen Norman Group, 2001
+    \bibitem{garbarino} {Garbarino, E. and Strabilevitz, M.: Gender Differences in the Perceived Risk of Buying Online and the Effects of Receiving a Site Recommendation, Journal of Business Research wydanie 57, str. 768-775, 2004}
+    \bibitem{gate} {Gate R., Nacamuli A.: Electronic Funds Transfer, The Internet Encyclopedia, 2004}
+    \bibitem{global_trends} {Global Trends in Online Shopping, A Nielsen Global Consumer Report, June 2010}
+    \bibitem{grabner} {Grabner-Kräuter S., Kaluscha A.E.: Empirical research in online trust: a review and critical assessment, International Journal of Human-Computer Studies, wydanie 58, nr 6, str. 783-812, 2003}
+    \bibitem{gregor} {Gregor B., Stawiszyński M.: e-Commerce, 2002}
+    \bibitem{harris} {Harris Interactive: Privacy leadership initiative, 2001}
+    \bibitem{helander} {Helander M. G., Khalid H. M.: Modeling the customer in electronic commerce. Applied Ergonomics wydanie 31, str. 609-619, 2000}
+    \bibitem{hoffman} {Hoffman D. L., Novak T. P. i Chatterjee P.: Commercial Scernarios for the Web: Opportunities and challenges. Journal of Computer-Mediated Communication, Special Issue on Electronic Commerce, str. 1-3, 1996}
+    \bibitem{iab} {Interactive Bureau (IAB): FTSE-100's Web sites are still \'wallowing in mediocrity\', 2003}
+    \bibitem{joines} {Joines, J., Scherer, C. and Scheufele, D.: Exploring Motivations for Consumer Web Use and Their Implications for E-Commerce, Journal of Consumer Marketing wydanie 20, nr 2, str. 90-109, 2003}
+    \bibitem{kantor} {Kantor M., Burrows J. H.: Electronic Data Interchange (EDI), National Institute of Standards and Technology, 1996}
+    \bibitem{katz_aspen} {Katz J., Aspen P.: Motives, hurdles and dropouts. Who is on the Internet and why? Communications of the ACM, wydanie 40, str. 97-102, 1997}
+    \bibitem{kaushik} {Kaushik P.: History of E-Commerce, 2010}
+    \bibitem{keeney} {Keeney R. L.: The value of Internet commerce to the customer, Management Science, wydanie 45, str. 533-542, 1999}
+    \bibitem{kim} {Kim J., Lee J.: Critical design factors for successful e-commerce systems, Behaviour and Information Technology, wydanie 21, str. 185-199, 2002}
+    \bibitem{li} {Li, H., Kuo, C. and Russell, M. G.: The Impact of Perceived Channel Utilities, Shopping Orientations, and Demographics on the Consumer's Online Buying Behavior, Journal of Computer-Mediated Communication, wydanie 5, nr 2, 1999}
+    \bibitem{lu} {Lu, J., Yu, C.S., Liu, C. and Yao, J.: Technology acceptance model for wireless internet, Internet Research: Electronic Networking Applications and Policy, wydanie 13 nr 3, str. 206-22, 2003}
+    \bibitem{lynch} {Lynch, P. D., Kent, R. J. and Srinivasan, S. S.: The Global Internet Shopper: Evidence From Shopping Tasks in Twelve Countries, Journal of Advertising Research wydanie 41, nr 3, str. 15-23, 2001}
+    \bibitem{mahmood} {Mahmood, M. A., Bagchi, K. and Ford, T. C.: On-Line Shopping Behavior: Cross-Country Empirical Research, International Journal of Electronic Commerce, rocznik 9, nr 1, str. 9-30, 2004}
+    \bibitem{manhartsberger} {Manhartsberger M., Musil S.: Web Usability: Das Prinzip des Vertrauens, Galileo Press, Bonn, 2001}
+    \bibitem{mckinsey} {McKinsey Quarterly: Getting prices right on the Web, Report No. 2, 2001}
+    \bibitem{nicholls} {Nicholls Ch.: The Science of Shopping Cart Abandonment, A research report from The Conversion Academy, 2011}
+    \bibitem{nielsen} {Nielsen J., Molich R., Snyder C., Farrel S.: E-Commerce user experience, Fremont, CA: Nielsen Norman Group, 2001}
     \bibitem{park_2004} Park, J., Lee, D. and Ahn, J.: Risk-Focused E-Commerce Adoption Model: a Cross-Country Study, Journal of Global Information Management wydanie 7, str. 6-30, 2004
-    \bibitem{pitkow_kehoe} Pitkow J.E., Kehoe C.M.: Emerging trends in the www user population . Communications of the ACM, wydanie 39, str. 106-108, C.M. 1996
+    \bibitem{pitkow_kehoe} Pitkow J.E., Kehoe C.M.: Emerging trends in the www user population. Communications of the ACM, wydanie 39, str. 106-108, C.M. 1996
     \bibitem{shin} Shin, D.H.: Towards an understanding of the consumer acceptance of mobile wallet,
 Computers in Human Behavior, wydanie 25, nr 6, str. 1343-54, 2009
     \bibitem{google_seo} Sisson, D.: Google SEO secrets, How to Get a Top Ranking With Search Engine Optimization, 2006
